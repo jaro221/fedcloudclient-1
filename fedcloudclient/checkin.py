@@ -147,9 +147,7 @@ def check_token(oidc_token, verbose=False):
     return oidc_token
 
 
-def get_checkin_id(
-    oidc_token,
-):
+def get_checkin_id(oidc_token):
     """
     Get EGI Check-in ID from access token
 
@@ -206,7 +204,7 @@ def get_access_token(
             "Error: An access token is needed for the operation. You can specify "
             "access token directly via --oidc-access-token option or use oidc-agent "
             "via --oidc-agent-account or mytoken via --mytoken"
-        )
+            )
 
     return access_token
 
